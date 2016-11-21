@@ -7,11 +7,11 @@ $(document).ready( function() {
 
       var clickSetter = function(){
         var counter = i;
-        $('.'+letters[counter]).click(function(event){
+        $('.'+ letters[counter]).click(function(event){
         var sound = document.getElementById(letters[counter] + "Audio");
         sound.play();
-        });//.click
-      };//clickSetter
+        });
+      };
       clickSetter();
 
       var keystrokeSetter = function() {
@@ -20,11 +20,11 @@ $(document).ready( function() {
             if (event.key == letters[counter]){
               var sound = document.getElementById(letters[counter] +"Audio");
               sound.play();
-            }//conditional
-          });//.keydown
-      }//keystrokeSetter
+            }
+          });
+      }
       keystrokeSetter();
-    }//assignNotes
-  }//loop
+    }
+  }
   assignNotes();
-});//whole document
+});
