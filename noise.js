@@ -8,7 +8,7 @@ $(document).ready( function() {
       var clickSetter = function(){
         var counter = i;
         $('.'+ letters[counter]).click(function(event){
-        var sound = document.getElementById(letters[counter] + "Audio");
+        var sound = $("#" + letters[counter] + "Audio")[0];
         sound.load();
         sound.play();
         });
@@ -19,7 +19,7 @@ $(document).ready( function() {
         var counter = i;
         $('body').keydown(function(event){
             if (event.key == letters[counter]){
-              var sound = document.getElementById(letters[counter] +"Audio");
+              var sound = $("#" + letters[counter] + "Audio")[0];
               sound.load();
               sound.play();
             }
