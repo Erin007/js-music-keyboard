@@ -9,6 +9,7 @@ $(document).ready( function() {
         var counter = i;
         $('.'+ letters[counter]).click(function(event){
         var sound = document.getElementById(letters[counter] + "Audio");
+        sound.load();
         sound.play();
         });
       };
@@ -19,6 +20,7 @@ $(document).ready( function() {
         $('body').keydown(function(event){
             if (event.key == letters[counter]){
               var sound = document.getElementById(letters[counter] +"Audio");
+              sound.load();
               sound.play();
             }
           });
